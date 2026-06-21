@@ -1,0 +1,4 @@
+services:
+  tests:
+    build: .
+    command: ./vendor/bin/kahlan
