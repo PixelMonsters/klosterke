@@ -8,16 +8,8 @@ class WhiteWineTicker implements Ticker
 {
     public function tick(Klosterke $product): void
     {
-        $product->kwaliteit++;
+        $product->kwaliteit += $this->getQualityModifier($product);
         $product->verkopenVoor--;
-
-        if ($product->verkopenVoor < 10) {
-            $product->kwaliteit++;
-        }
-
-        if ($product->verkopenVoor < 5) {
-            $product->kwaliteit++;
-        }
 
         if ($product->kwaliteit > 50) {
             $product->kwaliteit = 50;
@@ -26,6 +18,15 @@ class WhiteWineTicker implements Ticker
         if ($product->verkopenVoor < 0) {
             $product->kwaliteit = 0;
         }
+    }
+
+    private function getQualityModifier(Klosterke $product): int
+    {
+        return match (true) {
+            $product->verkopenVoor <= 5 => 3,
+            $product->verkopenVoor <= 10 => 2,
+            default => 1,
+        };
     }
 
 }
