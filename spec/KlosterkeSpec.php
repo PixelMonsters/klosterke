@@ -153,8 +153,8 @@ describe('Klosterke', function () {
 
         context('Witte Wijn', function () {
             /*
-                "Witte Wijn", net zoals Rode Wijn, lopen op in kwaliteit als de verkoopVoor 
-                datum dichterbij komt; Kwaliteit verhoogt met 2 wanneer er 10 of minder dagen 
+                "Witte Wijn", net zoals Rode Wijn, lopen op in kwaliteit als de verkoopVoor
+                datum dichterbij komt; Kwaliteit verhoogt met 2 wanneer er 10 of minder dagen
                 te gaan zijn en met 3 wanneer er 5 of minder dagen te gaan zijn. Wanneer de verkoopVoor
                 datum is gepasseerd keldert de waarde naar 0
              */
@@ -245,7 +245,7 @@ describe('Klosterke', function () {
         });
 
 
-        context("Kloosterbier items", function () {
+        context('Kloosterbier items', function () {
 
             it('update Conjured items voor de verkoopdatum', function () {
                 $item = Klosterke::of('Kloosterbier - Franziskaner', 10, 10);

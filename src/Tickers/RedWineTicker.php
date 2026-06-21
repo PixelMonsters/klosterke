@@ -6,13 +6,12 @@ use App\Klosterke;
 
 class RedWineTicker implements Ticker
 {
-
     public function tick(Klosterke $product): void
     {
         $product->kwaliteit++;
         $product->verkopenVoor--;
 
-        if($product->verkopenVoor < 0) {
+        if ($product->verkopenVoor < 0) {
             $product->kwaliteit++;
         }
 

@@ -6,7 +6,6 @@ use App\Klosterke;
 
 class NormalTicker implements Ticker
 {
-
     public function tick(Klosterke $product): void
     {
         $product->kwaliteit--;

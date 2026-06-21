@@ -6,10 +6,9 @@ use App\Klosterke;
 
 class HistoricalTicker implements Ticker
 {
-
     public function tick(Klosterke $product): void
     {
-       //Those items always stays the same
+        //Those items always stays the same
     }
 
 }

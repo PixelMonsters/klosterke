@@ -30,3 +30,6 @@ Homestead.json
 auth.json
 
 .idea
+
+# Tool caches
+.php-cs-fixer.cache
