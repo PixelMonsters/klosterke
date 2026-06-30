@@ -11,6 +11,7 @@ use Tests\TestCase;
 class TickAllProductsCommandTest extends TestCase
 {
     use RefreshDatabase;
+
     public function test_dispatches_job_per_product(): void
     {
         Bus::fake();

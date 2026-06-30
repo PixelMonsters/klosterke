@@ -32,5 +32,4 @@ class Product extends Model
             'category' => ProductCategory::class,
         ];
     }
-
 }

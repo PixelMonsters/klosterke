@@ -2,7 +2,6 @@ name: CI
 
 on:
   push:
-    branches: [main]
   pull_request:
     branches: [main]
 
@@ -23,10 +22,10 @@ jobs:
         run: composer install --prefer-dist --no-progress
 
       - name: PHP-CS-Fixer
-        run: composer lint-ci
+        run: vendor/bin/pint --test
 
       - name: PHPStan
-        run: composer phpstan
+        run: vendor/bin/phpstan analyse
 
       - name: Tests
-        run: composer test
+        run: php artisan test

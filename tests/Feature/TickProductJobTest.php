@@ -11,6 +11,7 @@ use Tests\TestCase;
 class TickProductJobTest extends TestCase
 {
     use RefreshDatabase;
+
     public function test_tick_processes_product(): void
     {
         $product = Product::factory()->create([
