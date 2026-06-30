@@ -21,11 +21,14 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress
 
+      - name: Setup env file
+        run: cp .env.ci .env
+
       - name: PHP-CS-Fixer
         run: vendor/bin/pint --test
 
       - name: PHPStan
-        run: vendor/bin/phpstan analyse
+        run: ./vendor/bin/phpstan analyse --memory-limit=2G
 
       - name: Tests
         run: php artisan test

@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Enum\ProductCategory;
+use Database\Factories\ProductFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 

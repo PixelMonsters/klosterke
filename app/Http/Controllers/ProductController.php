@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Enum\ProductCategory;
 use App\Models\Product;
+use Illuminate\View\View;
 
 class ProductController extends Controller
 {
-    public function index()
+    public function index(): View
     {
         $products = Product::query()
             ->orderBy('category')
