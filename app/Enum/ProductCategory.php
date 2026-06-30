@@ -17,6 +17,17 @@ enum ProductCategory: string
     case HISTORICAL = 'historical';
     case MONASTERY_BEER = 'monastery-beer';
 
+    public function label(): string
+    {
+        return match ($this) {
+            self::NORMAL => 'Normaal',
+            self::RED_WINE => 'Rode Wijn',
+            self::WHITE_WINE => 'Witte Wijn',
+            self::HISTORICAL => 'BBQ',
+            self::MONASTERY_BEER => 'Kloosterbier',
+        };
+    }
+
     public function resolveTicker(): Ticker
     {
         return match ($this) {
